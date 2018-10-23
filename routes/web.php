@@ -15,5 +15,17 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'BookController@index');
 
+Route::get('/', 'PublicController@index');
+Route::get('/public', 'PublicController@index');
+Route::get('/books', 'BookController@index');
+Route::get('/book/create', 'BookController@create');
+Route::post('/book', 'BookController@store');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('/private', 'PrivateController@index');
+Route::get('/private/show', 'PrivateController@show');

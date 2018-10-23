@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password',    // Mass Fillable
     ];
 
     /**
@@ -24,7 +24,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
+    protected $hidden = [               //$hidden: CAN NOT ABE DUMPED
         'password', 'remember_token',
     ];
 }
